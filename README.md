@@ -1,6 +1,6 @@
 # Gitea-with-PAM Builder
 
-Unfortunately official binaries for Gitea do not support PAM authentication.
+Unfortunately official binaries for Gitea do not support PAM authentication.\
 This Docker container builds the latest Gitea release with PAM support for Debian based Linux distributions (Debian/Ubuntu/Mint).
 
 ## Prerequisites:
