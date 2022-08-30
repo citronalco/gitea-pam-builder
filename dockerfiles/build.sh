@@ -27,6 +27,9 @@ LATEST_RELEASE=$(curl --silent https://api.github.com/repos/${GITHUB_REPO}/relea
 git checkout release/"${LATEST_RELEASE}" || exit 1
 git pull || exit 1
 
+# clean
+make clean
+
 # build
 CGO_ENABLED=1 TAGS="bindata netgo osusergo $EXTRA_TAGS" make build || exit 1
 

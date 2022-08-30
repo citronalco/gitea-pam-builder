@@ -5,8 +5,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends git build-essential curl jq libpam-dev && \
     rm -rf /var/lib/apt/lists/*
 
-# install nodejs 14 from nodesource repository
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+# install nodejs LTS from nodesource repository
+RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash - && \
     apt-get install -y --no-install-recommends nodejs && \
     rm -rf /var/lib/apt/lists/*
 
