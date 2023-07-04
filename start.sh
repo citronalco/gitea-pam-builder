@@ -5,7 +5,7 @@ if [ ! -f ./config.env ]; then
     exit 1
 fi
 
-docker pull golang:bullseye
+docker pull golang:bookworm
 
 docker build --tag gitea-build-container ./dockerfiles
 

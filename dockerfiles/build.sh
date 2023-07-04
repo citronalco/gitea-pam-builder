@@ -31,7 +31,7 @@ git pull || exit 1
 make clean
 
 # build
-CGO_ENABLED=1 TAGS="bindata netgo osusergo $EXTRA_TAGS" make build || exit 1
+CGO_ENABLED=1 TAGS="bindata sqlite sqlite_unlock_notify $EXTRA_TAGS" make build || exit 1
 
 # move result to directory "binary"
 VERSION=$(/source/gitea --version | cut -d ' ' -f 3) || exit 1
@@ -39,4 +39,3 @@ mv /source/gitea /binary/gitea-${VERSION} || exit 1
 
 echo
 echo "Sucessfully build /binary/gitea-${VERSION}"
-
